@@ -5,6 +5,12 @@ return require('packer').startup(function()
   })
 
   use('wbthomason/packer.nvim')
+
+  -- Lualine
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true }
+  }
   
   -- LSP
   use
@@ -30,20 +36,24 @@ return require('packer').startup(function()
   -- Autopair
   use{'windwp/nvim-autopairs'}
 
-  -- Tree
+  -- Tabs
+  use{
+    'kdheepak/tabline.nvim',
+    requires = { 
+      {'hoob3rt/lualine.nvim', opt=true },
+      {'kyazdani42/nvim-web-devicons', opt = true}
+    }
+  }
+  
+  -- Tree 
   use {
     'kyazdani42/nvim-tree.lua',
-    requires = {'kyazdani42/nvim-web-devicons'},
-    tag = 'nightly',
-  } 
-
-  -- Tabs
-  use 
-  {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'},
-  }
-
+    requires = {
+      'kyazdani42/nvim-web-devicons', 
+    },
+    tag = 'nightly' 
+}
+ 
   -- Themes
   use('joshdick/onedark.vim')
 
