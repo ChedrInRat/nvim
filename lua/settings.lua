@@ -38,8 +38,15 @@ require('nvim_comment').setup{}
 -- Autopairs configuration
 require('nvim-autopairs').setup{}
 
-require('nvim-tree').setup()
+-- Tabline configuration 
+require('tabline').setup{
+  
+}
 
+-- Nvim-tree configuration
+require('nvim-tree').setup{
+  
+}
 
 -- COQ start
 vim.cmd('COQnow -s')
