@@ -1,2 +1,1 @@
-# nvim
-My NeoVim lua config 
+### My NeoVim lua config 
