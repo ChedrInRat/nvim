@@ -12,9 +12,9 @@ vim.keymap.set('n', 'ct', ':Neotree close<CR>')
 -- TERM
 vim.keymap.set('n', 'trm', ':terminal<CR>')
 -- TABS
-vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>')
-vim.keymap.set('n','<s-Tab>',':BufferLineCyclePrev<CR>')
-vim.keymap.set('n','x<Tab>', ':BufferLinePickClose<CR>')
+vim.keymap.set('n', '<Tab>', ':BufferNext<CR>')
+vim.keymap.set('n','<s-Tab>',':BufferPrevious<CR>')
+vim.keymap.set('n','x<Tab>', ':BufferClose<CR>')
 vim.keymap.set('n', 'q<Tab>', ':bdelete!<CR>')
 -- SEARCH 
 
