@@ -1,11 +1,14 @@
 vim.g.mapleader = ' '
 
 -- VIM
-vim.keymap.set('i', 'jj', '<Esc>') 
-vim.keymap.set('n', 'qq', ':q!<CR>') 
-vim.keymap.set('n', '<c-s>', ':w<CR>') 
+vim.keymap.set('i', 'jj', '<Esc>')
+vim.keymap.set('n', 'qq', ':q!<CR>')
+vim.keymap.set('n', '<c-s>', ':w<CR>')
 vim.keymap.set('n', '<c-q>', ':wq<CR>')
-vim.keymap.set('n', 'aq', ':qa<CR>')
+
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
 -- NEOTREE
 vim.keymap.set('n', 'tt', ':Neotree<CR>')
 vim.keymap.set('n', 'ct', ':Neotree close<CR>')
