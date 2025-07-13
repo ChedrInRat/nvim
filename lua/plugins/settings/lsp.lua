@@ -17,19 +17,3 @@ m.setup({
       },
 
 })
-
-
--- m.setup_handlers {
---   function (server_name)
---     lspconfig[server_name].setup({
---       capabilities = cpb,
---       settings = {
---         Lua = {
---             diagnostics = {
---                 globals = { 'vim' }
---             }
---         }
---     }
---     })
---   end
--- }
