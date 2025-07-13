@@ -11,7 +11,6 @@ m.setup{
     'lua_ls',
     'rust_analyzer',
     'pyright',
-    'tsserver',
     'sqls',
     'marksman',
     'gopls',
@@ -20,17 +19,17 @@ m.setup{
   },
 }
 
-m.setup_handlers {
-  function (server_name)
-    lspconfig[server_name].setup({
-      capabilities = cpb,
-      settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-    })
-  end
-}
+-- m.setup_handlers {
+--   function (server_name)
+--     lspconfig[server_name].setup({
+--       capabilities = cpb,
+--       settings = {
+--         Lua = {
+--             diagnostics = {
+--                 globals = { 'vim' }
+--             }
+--         }
+--     }
+--     })
+--   end
+-- }
