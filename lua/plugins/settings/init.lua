@@ -1,6 +1,0 @@
-require("plugins.settings.keymaps")
-require("plugins.settings.lsp")
-require("plugins.settings.options")
-require("plugins.settings.commands")
-require("plugins.settings.cmp")
-require("plugins.settings.formatter")

@@ -1,4 +1,4 @@
-return {
+return{
   {'romgrk/barbar.nvim',
     dependencies = {
       'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
@@ -11,13 +11,5 @@ return {
       -- insert_at_start = true,
       -- …etc.
     },
-    version = '^1.0.0', -- optional: only update when a new 1.x version is released
-    config = function()
-      require("barbar").setup({
-        sidebar_filetypes = {
-          ['neo-tree'] = {text = '󱏒 Tree 󱏒', align = 'center'},
-        }, 
-      })
-    end
   },
 }

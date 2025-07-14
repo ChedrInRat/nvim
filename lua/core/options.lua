@@ -1,23 +1,26 @@
 vim.o.termguicolors = true
 
-vim.opt.wrap = false 
+vim.o.wrap = false
+vim.o.hlsearch = true
 
-vim.opt.hlsearch = true
+vim.o.splitright = true
+vim.o.splitbelow = true
 
-vim.opt.cursorline = true
+vim.o.cursorline = true
 
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+vim.o.nu = true
+vim.o.relativenumber = true
 
-vim.opt.number = true
-vim.opt.relativenumber = true
 
-vim.opt.expandtab = true
-vim.opt.smartindent = true
+vim.o.expandtab = true
+vim.o.smartindent = true
 
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
+vim.o.shiftwidth = 2
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
 
 vim.cmd([[set showtabline=0]])
+
+
+
 
