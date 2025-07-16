@@ -1,20 +1,29 @@
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local lspkind = require("lspkind")
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup({
+
+	completion = {
+		completeopt = "menu,menuone,preview,noselect",
+	},
+
 	sources = {
 		{ name = "nvim_lsp" },
+		{ name = "path" },
 		{ name = "buffer" },
 		{ name = "calc" },
-		{ name = "path" },
-		{ name = "cmdline" },
 		{ name = "luasnip" },
+		-- { name = "cmdline", keyword_length = 2 },
 		{ name = "sql", keyword_length = 2 },
 		{ name = "treesitter", keyword_length = 2 },
 		{ name = "ctags", keyword_length = 2 },
 		{ name = "dictionary", keyword_length = 2 },
 		{ name = "dotenv", keyword_length = 2 },
 	},
+
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
@@ -43,6 +52,13 @@ cmp.setup({
 			cmp.config.compare.length,
 			cmp.config.compare.order,
 		},
+	},
+
+	formatting = {
+		format = lspkind.cmp_format({
+			maxwidth = 50,
+			ellipsis_char = "...",
+		}),
 	},
 })
 
